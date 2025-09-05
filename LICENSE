@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2025 Health AI Assistant Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+DISCLAIMER: This software provides general health information and educational 
+content only. It is not intended to be a substitute for professional medical 
+advice, diagnosis, or treatment. Always seek the advice of your physician or 
+other qualified health provider with any questions you may have regarding a 
+medical condition. Never disregard professional medical advice or delay in 
+seeking it because of something you have read in this software.
+
+In case of a medical emergency, call your doctor or emergency services 
+immediately. This software does not recommend or endorse any specific tests, 
+physicians, products, procedures, opinions, or other information that may be 
+mentioned in the responses.
+
+Third-party licenses:
+- Spring Boot: Apache License 2.0
+- LLaMA 3.2: Meta's Custom License (requires separate agreement)
+- Ollama: MIT License
+- FontAwesome: SIL OFL 1.1 License
