@@ -1,57 +1,53 @@
 # Health AI API
 
-A Spring Boot application that provides a REST API for health-related AI assistance using your fine-tuned LLaMA model through Ollama.
+Spring Boot REST API component of the Health AI Assistant project. This module provides the backend services for the health AI chatbot using fine-tuned LLaMA 3.2 model through Ollama.
 
-## Features
+## Component Overview
 
-- ✅ REST API endpoints for health queries
-- ✅ Integration with local Ollama LLaMA model
-- ✅ Web-based chat interface
-- ✅ Health check endpoints
-- ✅ Proper error handling and logging
-- ✅ Session management
+This is the **backend API module** of the Health AI Assistant. For complete project documentation, see the [main README](../README.md).
 
-## Prerequisites
-
-1. **Java 21** (as specified in pom.xml)
-2. **Maven** for building
-3. **Ollama running locally** with your fine-tuned model
+### Key Features
+- 🚀 **Spring Boot 3.5.5** with WebFlux reactive programming
+- 🤖 **Ollama Integration** for health-ai-doctor model
+- 🎨 **Web Interface** with beautiful gradient design
+- 📊 **Session Management** with UUID-based tracking
+- 🛡️ **Error Handling** and input validation
+- 📝 **Health Monitoring** endpoints
 
 ## Quick Start
 
-1. **Make sure Ollama is running:**
-   ```bash
-   ollama serve
-   ```
+### Prerequisites
+- Java 21
+- Maven 3.9+
+- Ollama with `health-ai-doctor` model
 
-2. **Verify your model is available:**
-   ```bash
-   ollama list
-   ```
-   (Should show `llama3.2:latest`)
+### Run the API
+```bash
+# From project root, ensure model is created first
+python create_health_model.py
 
-3. **Build and run the Spring Boot application:**
-   ```bash
-   cd health-ai-api
-   mvn clean install
-   mvn spring-boot:run
-   ```
+# Build and run API
+cd health-ai-api
+mvn clean spring-boot:run
 
-4. **Test the API:**
-   - Web Interface: http://localhost:8080
-   - Health Check: http://localhost:8080/api/v1/health
-   - API Info: http://localhost:8080/api/v1/info
+# Test endpoints
+curl http://localhost:8080/api/v1/health
+```
+
+### Access Points
+- **Web Interface**: http://localhost:8080
+- **API Health**: http://localhost:8080/api/v1/health
+- **API Info**: http://localhost:8080/api/v1/info
 
 ## API Endpoints
 
 ### POST `/api/v1/chat`
-Send a health-related question to the AI.
+Send a health question to the AI assistant.
 
 **Request:**
 ```json
 {
-  "message": "What are the symptoms of diabetes?",
-  "userId": "user123",
+  "message": "How can I prevent urinary tract infections?",
   "sessionId": "optional-session-id"
 }
 ```
@@ -59,63 +55,72 @@ Send a health-related question to the AI.
 **Response:**
 ```json
 {
-  "response": "Common symptoms of diabetes include...",
-  "modelUsed": "llama3.2:latest",
-  "timestamp": "2025-09-03T10:30:00",
-  "responseTimeMs": 1250,
-  "sessionId": "session-abc-123"
+  "response": "UTI prevention includes drinking plenty of water...",
+  "success": true,
+  "error": null,
+  "modelUsed": "health-ai-doctor",
+  "responseTime": 1250,
+  "sessionId": "session-abc-123",
+  "timestamp": 1693910400000
 }
 ```
 
 ### GET `/api/v1/health`
-Check if the service and Ollama are running properly.
+Check if the API and Ollama model are available.
 
 ### GET `/api/v1/info`
-Get API information and available endpoints.
+Get API version and endpoint information.
 
 ## Configuration
 
-Update `application.properties` to customize:
+The API uses `application.properties` for configuration:
 
 ```properties
+# Server Configuration
+server.port=8080
+
 # Ollama Configuration
 ollama.base-url=http://localhost:11434
-ollama.model-name=llama3.2:latest
-ollama.timeout=60000
+ollama.model-name=health-ai-doctor
+ollama.timeout=120000
 
-# Custom system message
-health.assistant.system-message=Your custom health assistant instructions...
+# Health Assistant Configuration
+health.assistant.system-message=
 ```
 
-## Testing with curl
+## Testing
 
 ```bash
-# Test the chat endpoint
+# Test chat endpoint
 curl -X POST http://localhost:8080/api/v1/chat \
   -H "Content-Type: application/json" \
-  -d '{"message": "What should I do for a headache?"}'
+  -d '{"message": "How can I improve my sleep quality?"}'
 
-# Check health
+# Check health status
 curl http://localhost:8080/api/v1/health
 ```
 
-## Troubleshooting
+## Project Structure
 
-1. **"Ollama is not available"**: Make sure Ollama is running (`ollama serve`)
-2. **Model not found**: Verify the model name in `application.properties`
-3. **Timeout errors**: Increase the timeout value in configuration
-4. **Port conflicts**: Change `server.port` in `application.properties`
+```
+src/
+├── main/java/com/healthai/
+│   ├── HealthAiApiApplication.java     # Main application
+│   ├── config/                        # Configuration classes
+│   ├── controller/                    # REST controllers
+│   ├── dto/                          # Data transfer objects
+│   └── service/                      # Business logic
+└── main/resources/
+    ├── application.properties        # Configuration
+    └── static/index.html            # Web interface
+```
 
-## Development
+## Documentation
 
-- **Logs**: Check console output for detailed request/response logs
-- **Debug**: Set `logging.level.com.healthai=DEBUG` in application.properties
-- **CORS**: Currently allows all origins - configure properly for production
+- **[Complete Documentation](../TECHNICAL_DOCUMENTATION.md)** - Full technical details
+- **[API Reference](../API_REFERENCE.md)** - Complete API documentation
+- **[Deployment Guide](../DEPLOYMENT_GUIDE.md)** - Production deployment
 
-## Next Steps
+---
 
-- Deploy to cloud platform
-- Add authentication/authorization
-- Implement conversation history
-- Add rate limiting
-- Create more sophisticated health domain logic
+This API component is part of the larger Health AI Assistant project. See the [main README](../README.md) for complete setup instructions and project overview.
